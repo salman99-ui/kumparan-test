@@ -1,0 +1,153 @@
+@mixin row {
+    display: flex;
+    flex-direction: row;
+}
+
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.about{
+    font-family:'Poppins', sans-serif;
+
+    .main{
+        background-size: cover;
+        height: 600px;
+        background-repeat: no-repeat;
+        background-position-y: -20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+
+        h2{
+            margin: auto;
+            color: white;
+            text-align: center;
+            font-size: 65px;
+        }
+    }
+
+
+    .description{
+        padding: 40px 10%;
+
+        .title{
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+
+        }
+        
+    }
+
+
+
+    .teams{
+        background-color: rgb(37, 201, 241);
+        padding-bottom: 70px;
+
+        .main{
+            padding: 30px 12%;
+            display: block;
+
+            .team-title{
+                text-align: center;
+                font-size: 26px;
+                color: white;
+                letter-spacing: 1px
+            }
+
+
+            .content-one , .content-two{
+                @include row ;
+                justify-content: space-evenly;
+                padding: 40px 0;
+
+
+
+                .card{
+
+                    .card-img{
+                        width: 180px;
+                        height: 170px;
+                        border-radius: 100%;
+                    }
+
+                    p{
+                        font-size: 18px;
+                        font-weight: 600;
+                        text-align: center;
+                        margin: 5px 0;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+@media (max-width : 468px){
+    .about{
+
+        .main{
+            background-position: center;
+            height: 400px;
+            background-position-y: 0px;
+
+
+            h2{ font-size: 35px;}
+        }
+
+        .teams{
+
+            .main{
+
+                padding: 40px 5%;
+                height: 90px;
+
+
+                .content-one , .content-two{
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
+
+
+                    .card{
+
+                        @include column ;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 30px;
+
+                        .card-img{
+                            width: 110px;
+                            height: 95px;
+                        }
+
+                        .card-name{
+                            font-weight: 400;
+                            font-size: 18px;
+                        }
+
+                        .card-title{
+                            margin: 0;
+                            font-weight: 300;
+                            font-size: 13px;
+                        }
+
+                    }
+
+
+                    
+                }
+            }
+        }
+    }
+}

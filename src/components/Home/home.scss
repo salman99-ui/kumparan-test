@@ -1,0 +1,337 @@
+@mixin row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin btn-download {
+    padding: 8px 16px;
+    background-color: rgb(243, 247, 38);
+    border-radius: 10px;
+    color: #1a923b;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+.main-home{
+    
+    font-family:'Poppins', sans-serif;
+
+    .main-page{
+
+        @include row ;
+        padding: 170px 12%;
+
+        .main-info{
+            flex: 1.5;
+            
+            .desc{
+                width: 70%;
+                
+                h3{
+                    width: 80%;
+                    font-size: 29px;
+                    font-weight: 600;
+                   color :  rgb(37, 201, 241)
+                }
+
+                p{
+                    width: 90%;
+                    font-size: 15px;
+                    font-weight: 400;
+                    margin-bottom: 40px;
+                    line-height: 1.5;
+
+                }
+
+                a{
+                    @include btn-download ;
+                    text-decoration: none;
+                }
+            }
+        }
+
+
+        .main-apps{
+            flex: 1;
+        }
+    }
+
+
+    .satisfied{
+
+        padding: 60px 12%;
+
+        h3{
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 24px;
+        }
+
+        .saties-page{
+            width: 100%;
+            padding: 60px 0;
+            @include row ;
+            justify-content: space-around;
+
+
+            .s-img{
+                flex: 1;
+
+                    img{
+                        width: 500px;
+                        height: 330px;
+                        margin: 0 auto;
+                    }
+            }
+
+
+            .info{
+                flex: 1.2;
+
+                p{
+                    width: 90%;
+                    font-weight: 600;
+                    font-size: 18px;
+                    letter-spacing: 1px;
+                }
+
+                ul{
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+
+                    li{
+                        margin-bottom: 8px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .advantage{
+        padding:0 18%;
+        padding-top: 30px;
+        background-color: rgb(37, 201, 241);
+
+        h3{
+            font-size: 24px;
+            letter-spacing: 1px;
+            color: white;
+            margin: 0;
+           
+        }
+
+        .main{
+            position: relative;
+            .info{
+                
+                padding-bottom: 20px;
+                
+                ul{
+                    list-style-type: none;
+                    padding: 0;
+        
+                    li{
+                        
+                        margin-bottom: 20px;
+                        @include row ;
+                        align-items: center;
+        
+                        .bg{
+                            @include row ;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 100%;
+                            width: 40px;
+                            height: 40px;
+                            background-color: white;
+                        }
+        
+                        span{
+                            margin-left: 20px;
+                            font-weight: bold;
+                            font-size: 21px;
+                            font-family: sans-serif;
+                        }
+                    }
+                }
+            }
+
+            .apps{
+                
+                right: 0;
+                position: absolute;
+                bottom: -7px;
+            }
+        }
+
+       
+
+    }
+
+
+
+    .information{
+        padding: 40px 12%;
+
+
+        h3{
+            font-size: 24px;
+            letter-spacing: 1px;
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 6px;
+           
+        }
+
+        p{
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+            letter-spacing: 0.5px;
+        }
+
+
+        .main{
+            @include row ;
+            padding: 70px 0;
+            .card{
+                flex: 1;
+
+                .card-img{
+                    @include row ;
+                    justify-content: center;
+                   
+
+                    img{
+                        width: 160px;
+                        height: 150px;
+                    }
+                }
+
+                h3{
+                   
+                    font-size: 16px;
+                }
+            }
+        }
+
+
+        .btn-footer{
+           @include row ;
+           justify-content: center;
+
+           .btn{
+               @include btn-download ;
+               text-decoration: none;
+           }
+           
+        }
+    }
+}
+
+
+@media (max-width : 468px){
+    .main-home{
+        
+
+        .main-page{
+            @include column ;
+            padding:0px 5%;
+
+
+            .main-info{
+                
+                .desc{
+                    width: 100%;
+
+                    h3{
+                        width: 100%;
+                    }
+
+                   
+                }
+
+            }
+
+
+            .main-apps{
+                margin-top: 40px;
+            }
+        }
+
+
+        .satisfied{
+
+            padding: 60px 8%;
+            .saties-page{
+
+                flex-direction: column;
+
+                .s-img{
+
+                    img{
+                        width: 300px;
+                        height: 230px;
+                    }
+                }
+
+
+                .info{
+
+                    p{
+                        width: 100%;
+                        font-weight: 400;
+                        font-size: 21px;
+                    }
+
+                    ul{
+
+                        li{
+
+                            font-size: 21px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+        .advantage{
+
+            height: 730px;
+            padding: 30px 8%;
+            .main{
+                height: 630px;
+            }
+        }
+
+
+
+
+        .information{
+
+            .main{
+
+                flex-direction: column;
+
+                .card{
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+}
