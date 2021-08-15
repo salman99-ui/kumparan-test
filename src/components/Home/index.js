@@ -61,7 +61,6 @@ function Index() {
                         <ul>
                             <li><FaCheck /> Bayar Angkot</li>
                             <li><FaCheck /> Pembayaran Warung</li>
-                            <li><FaCheck /> Transaksi Sesama Teman</li>
                         </ul>
                     </div>
                 </div>

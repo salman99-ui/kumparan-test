@@ -94,7 +94,7 @@
 
             .info{
                 flex: 1.2;
-
+                padding: 0 20px;
                 p{
                     width: 90%;
                     font-weight: 600;
@@ -170,7 +170,7 @@
                 
                 right: 0;
                 position: absolute;
-                bottom: -10px;
+                bottom: -7px;
             }
         }
 
@@ -333,5 +333,74 @@
                 }
             }
         }
+    }
+}
+
+@media (min-width : 600px) and (max-width : 1200px){
+
+    .main-home{
+        
+        .main-page{
+            padding: 20px 5%;
+
+            .main-info{
+
+                .desc{
+                    width: 100%;
+
+                }
+            }
+        }
+
+
+        .satisfied{
+            padding: 60px 5%;
+
+
+            .saties-page{
+                flex-direction: column;
+
+                .info{
+                    padding: 0px;
+                }
+            }
+        }
+
+
+        .advantage{
+
+            padding: 0 5%;
+
+            .main{
+
+                .apps{
+                    img{
+                        height: 380px;
+                    }
+                }
+            }
+        }
+
+
+        .information{
+
+            padding: 40px 5%;
+
+            .main{
+
+                .card{
+
+                    .card-img{
+                        
+                        
+                        img{
+                            width: 130px;
+                            height: 120px;
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }

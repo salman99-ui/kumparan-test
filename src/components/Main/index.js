@@ -1,8 +1,8 @@
 import React , {useState} from 'react'
 import {Bill} from '../../assets'
 import {BrowserRouter as Router , Switch , Link , Route} from 'react-router-dom'
-import {Home , About , PageNotFound , Investor} from '../../components'
-import { FaFacebook , FaTwitter , FaYoutube , FaEnvelope , FaPhone , FaMapMarkerAlt , FaCalendarDay , FaBars} from 'react-icons/fa'
+import {Home , About , PageNotFound , Investor , Blog, Bantuan} from '../../components'
+import { FaFacebook , FaInstagram , FaYoutube , FaEnvelope , FaPhone , FaMapMarkerAlt , FaCalendarDay , FaBars} from 'react-icons/fa'
 import './main.scss'
 
 
@@ -35,15 +35,17 @@ function Index() {
                 <Route component={Home} path="/" exact />
                 <Route component={About} path="/about" />
                 <Route component={Investor} path="/investor" />
+                <Route component={Blog} path="/blog" />
+                <Route component={Bantuan} path="/bantuan" />
                 <Route component={PageNotFound} path="**" />
             </Switch>
 
             <div className="footer">
                     <div className="social-media">
                         <h3>Social Media</h3>
-                        <span><FaFacebook size="26" color="white" /></span>
-                        <span><FaTwitter size="26" color="white" /></span>
-                        <span><FaYoutube size="26" color="white" /></span>
+                        <a href="https://m.facebook.com/Bill-Indonesia-106523044922890/?ref=py_c"><FaFacebook size="26" color="white" /></a>
+                        <a href="https://instagram.com/bill_indonesia?utm_medium=copy_link"><FaInstagram size="26" color="white" /></a>
+                        <a href="https://youtube.com/channel/UCkDb-ziAMCKyzPdvmxQCHRQ"><FaYoutube size="26" color="white" /></a>
                     </div>
 
                     <div className="product">
@@ -51,7 +53,7 @@ function Index() {
                         <ul>
                             <li><Link to="/" className="list-link">Home</Link></li>
                             <li><Link to="/about" className="list-link">About Us</Link></li>
-                            <li><Link to="/roadmap" className="list-link">Milestone & Roadmap</Link></li>
+                            <li><Link to="/blog" className="list-link">Blog</Link></li>
                             <li><Link to="/investor" className="list-link">Investor Relation</Link></li>
                         </ul>
                     </div>

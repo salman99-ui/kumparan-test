@@ -1,0 +1,91 @@
+.bantuan{
+
+
+    .title{
+        text-align: center;
+        font-size: 28px;
+        font-weight: 500;
+    }
+
+
+    .form-bantuan{
+        display: flex;
+        flex-direction: row;
+        padding: 20px 12%;
+
+        .form{
+            flex: 2;
+            padding: 0 50px;
+
+            h3{
+                font-size: 21px;
+                font-weight: 500; 
+            }
+
+            .input{
+                display: block;
+                padding: 8px 10px;
+                width: 93%;
+                margin-bottom: 30px;
+                border-radius: 10px;
+                outline: none;
+            }
+
+            .inputarea{
+
+                width: 91%;
+              
+                display: block;
+                padding: 20px;
+                height: 250px;
+                margin-bottom: 40px;
+            }
+
+
+            .btn-submit{
+                padding: 8px 28px;
+                background-color: rgb(37, 201, 241);
+                color: white;
+                border-radius: 8px;
+                letter-spacing: 1px;
+                border: 1px solid transparent;
+            }
+        }
+
+
+        .info{
+            flex: 1;
+            background-color: rgb(37, 201, 241);
+            height: 400px;
+            padding: 20px;
+
+            h3{
+                font-size: 21px;
+                font-weight: 500; 
+            }
+        }
+    }
+}
+
+
+@media (max-width : 468px){
+    .bantuan{
+
+        .form-bantuan{
+            flex-direction: column;
+            padding: 20px 0;
+
+
+            .form{
+                padding: 40px 0;
+
+                .inputarea{
+                    box-sizing: border-box;
+                    width: 100%;
+                }
+            }
+        }
+
+
+    }
+}

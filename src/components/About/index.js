@@ -1,5 +1,5 @@
 import React from 'react'
-import {Foot , CEO} from '../../assets'
+import {Foot , CEO , CTO , Business , Strategic} from '../../assets'
 import './about.scss'
 
 function Index() {
@@ -36,13 +36,13 @@ function Index() {
                         </div>
 
                         <div className="card">
-                             <img className="card-img" src={CEO}  />
+                             <img className="card-img" src={CTO}  />
                              <p className="card-name">Eka Gunawan R</p>
                              <p className="card-title">Founder & CEO</p>
                         </div>
 
                         <div className="card">
-                             <img className="card-img" src={CEO}  />
+                             <img className="card-img" src={Business}  />
                              <p className="card-name">Eka Gunawan R</p>
                              <p className="card-title">Founder & CEO</p>
                         </div>
@@ -51,7 +51,7 @@ function Index() {
 
                     <div className="content-two">
                         <div className="card">
-                             <img className="card-img" src={CEO}  />
+                             <img className="card-img" src={Strategic}  />
                              <p className="card-name">Eka Gunawan R</p>
                              <p className="card-title">Founder & CEO</p>
                         </div>
