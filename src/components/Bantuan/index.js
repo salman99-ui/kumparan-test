@@ -26,7 +26,7 @@ function Index() {
             <div className="info">
                 <h3>Temukan Kami</h3>
                 <p><FaPhone color="black" /> +62 2123314</p>
-                <p><FaEnvelope color="black" /> Bill_indonesia@gmail.com </p>
+                <p><FaEnvelope color="black" /> info@bill.co.id </p>
                 <p><FaMapMarkerAlt color="black" /> PIK 2 , North Jakarta</p>
             </div>
             </div>

@@ -37,14 +37,14 @@ function Index() {
 
                         <div className="card">
                              <img className="card-img" src={CTO}  />
-                             <p className="card-name">Eka Gunawan R</p>
-                             <p className="card-title">Founder & CEO</p>
+                             <p className="card-name">Ricky Susanto</p>
+                             <p className="card-title">CTO</p>
                         </div>
 
                         <div className="card">
                              <img className="card-img" src={Business}  />
-                             <p className="card-name">Eka Gunawan R</p>
-                             <p className="card-title">Founder & CEO</p>
+                             <p className="card-name">Olsu Babay</p>
+                             <p className="card-title">Chief operating Officer</p>
                         </div>
                     </div>
 
@@ -52,14 +52,8 @@ function Index() {
                     <div className="content-two">
                         <div className="card">
                              <img className="card-img" src={Strategic}  />
-                             <p className="card-name">Eka Gunawan R</p>
-                             <p className="card-title">Founder & CEO</p>
-                        </div>
-
-                        <div className="card">
-                             <img className="card-img" src={CEO}  />
-                             <p className="card-name">Eka Gunawan R</p>
-                             <p className="card-title">Founder & CEO</p>
+                             <p className="card-name">Luc Tai</p>
+                             <p className="card-title"> Stategic Advisor</p>
                         </div>
                     </div>
 
