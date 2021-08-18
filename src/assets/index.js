@@ -7,6 +7,7 @@ import Phone2 from './img/phone2.png'
 import Foot from './img/foot.jpg'
 import CEO from './img/BILL Eka.jpg'
 import CTO from './img/Ricky Bill.jpg'
+import Director from './img/BILL BRIAN.jpg'
 import Business from './img/BILL Osu.jpg'
 import Strategic from './img/BILL Luctai.jpg'
 import Bill2 from './img/Bill2.jpg'
@@ -39,6 +40,7 @@ export{
     CTO ,
     Business ,
     Strategic ,
+    Director ,
     Bill2 , 
     Bill3 , 
     KWK , 

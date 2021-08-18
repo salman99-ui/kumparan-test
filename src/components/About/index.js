@@ -1,5 +1,5 @@
 import React from 'react'
-import {Foot , CEO , CTO , Business , Strategic} from '../../assets'
+import {Foot , CEO , CTO , Business , Strategic ,Director} from '../../assets'
 import './about.scss'
 
 function Index() {
@@ -53,6 +53,12 @@ function Index() {
 
 
                     <div className="content-two">
+                        <div className="card">
+                             <img className="card-img" src={Director}  />
+                             <p className="card-name">Brian Yie</p>
+                             <p className="card-title">Legal Director</p>
+                        </div>
+
                         <div className="card">
                              <img className="card-img" src={CTO}  />
                              <p className="card-name">Ricky Susanto</p>
