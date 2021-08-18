@@ -33,7 +33,7 @@
 
 
     .description{
-        padding: 40px 8%;
+        padding: 60px 8%;
 
         .title{
             text-align: center;
@@ -43,6 +43,11 @@
 
         }
         
+        p{
+            line-height: 1.8;
+            letter-spacing: 1px;
+            font-size: 20px;
+        }
     }
 
 
@@ -72,7 +77,9 @@
 
 
                 .card{
-
+                    @include column ;
+                    align-items: center;
+                    flex-direction: column;
                     .card-img{
                         width: 180px;
                         height: 175px;
@@ -88,7 +95,8 @@
 
                     .card-name{
                         font-weight: 400;
-                        font-size: 18px;
+                        font-size: 20px;
+                        margin: 10px 0;
                     }
 
                     .card-title{

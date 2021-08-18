@@ -29,6 +29,13 @@ function Index() {
                 <div className="main">
                     <h3 className="team-title">Kenalkan Tim Dibalik Bill Indonesia</h3>
                     <div className="content-one">
+                        
+                        <div className="card">
+                             <img className="card-img" src={Business}  />
+                             <p className="card-name">Olsu Babay</p>
+                             <p className="card-title">Chief Operating Officer</p>
+                        </div>
+
                         <div className="card">
                              <img className="card-img" src={CEO}  />
                              <p className="card-name">Eka Gunawan Rudyanto</p>
@@ -36,24 +43,20 @@ function Index() {
                         </div>
 
                         <div className="card">
-                             <img className="card-img" src={CTO}  />
-                             <p className="card-name">Ricky Susanto</p>
-                             <p className="card-title">Chief Technology Officer</p>
+                             <img className="card-img" src={Strategic}  />
+                             <p className="card-name">Luc Tai</p>
+                             <p className="card-title"> Strategic Advisor</p>
                         </div>
 
-                        <div className="card">
-                             <img className="card-img" src={Business}  />
-                             <p className="card-name">Olsu Babay</p>
-                             <p className="card-title">Chief Operating Officer</p>
-                        </div>
+                       
                     </div>
 
 
                     <div className="content-two">
                         <div className="card">
-                             <img className="card-img" src={Strategic}  />
-                             <p className="card-name">Luc Tai</p>
-                             <p className="card-title"> Strategic Advisor</p>
+                             <img className="card-img" src={CTO}  />
+                             <p className="card-name">Ricky Susanto</p>
+                             <p className="card-title">Chief Technology Officer</p>
                         </div>
                     </div>
 

@@ -1,6 +1,6 @@
 .bantuan{
 
-
+    min-height: 80vh;
     .title{
         text-align: center;
         font-size: 28px;
@@ -58,7 +58,7 @@
         .info{
           
             background-color: rgb(37, 201, 241);
-            height: 400px;
+            height: 300px;
             padding: 20px;
             display: flex;
             flex-direction: column;
