@@ -22,11 +22,11 @@ function Index() {
 
                 <ul className={"list " + (show ? 'showTab' : '')}>
 
-                    <li><Link to="/" className="link">Beranda</Link></li>
-                    <li><Link to="/about" className="link">Tentang Bill</Link></li>
-                    <li><Link to="/blog" className="link">Blog</Link></li>
-                    <li><Link to="/investor" className="link">Investor Relation</Link></li>
-                    <li><Link to="/bantuan" className="link">Bantuan</Link></li>
+                    <li><Link onClick={() => setShow(!show)} to="/" className="link">Beranda</Link></li>
+                    <li><Link onClick={() => setShow(!show)} to="/about" className="link">Tentang Bill</Link></li>
+                    <li><Link onClick={() => setShow(!show)} to="/blog" className="link">Blog</Link></li>
+                    <li><Link onClick={() => setShow(!show)} to="/investor" className="link">Investor Relation</Link></li>
+                    <li><Link onClick={() => setShow(!show)} to="/bantuan" className="link">Bantuan</Link></li>
                     
                 </ul>
             </div>
