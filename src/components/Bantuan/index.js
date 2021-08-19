@@ -1,5 +1,5 @@
 import React from 'react'
-import {FaPhone , FaEnvelope , FaMapMarkerAlt} from 'react-icons/fa'
+import {FaCalendar , FaEnvelope , FaMapMarkerAlt} from 'react-icons/fa'
 import './bantuan.scss'
 
 
@@ -25,9 +25,9 @@ function Index() {
 
             <div className="info">
                 <h3>Temukan Kami</h3>
-                <p><FaPhone color="black" /> +62 2123314</p>
                 <p><FaEnvelope color="black" /> info@bill.co.id </p>
                 <p><FaMapMarkerAlt color="black" /> PIK 2 , North Jakarta</p>
+                <p><FaCalendar /> Monday - Friday</p>
             </div>
             </div>
         </div>
