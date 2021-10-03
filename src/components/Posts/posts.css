@@ -1,0 +1,43 @@
+.posts{
+    margin-bottom: 20px;
+    padding: 40px 0;
+}
+
+.posts .header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.posts .title{
+    font-weight: 400;
+    font-size: 28px;
+    margin: 0;
+
+}
+
+.posts .link:first-child ,.posts .link:nth-child(2) , .posts .link:nth-child(3) {
+    padding : 10px 13px ;
+    text-decoration : none ;
+}
+
+.posts .link:nth-child(1){
+    margin-right: 12px;
+    border : 1px solid blue ;
+
+}
+
+.posts .link:nth-child(2){
+    margin-right: 12px;
+    border : 1px solid green ;
+    color: green;
+
+}
+
+.posts .link:nth-child(3){
+    margin-right: 12px;
+    border : 1px solid red ;
+    color: red;
+
+}

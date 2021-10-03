@@ -1,9 +1,16 @@
 
-import Apps from './components/Main'
+import {Provider} from 'react-redux'
+import Apps from './Route'
+import Store from './Redux'
 import './App.css';
 
 function App() {
-  return <Apps />
+  return (
+    <Provider store={Store}>
+        <Apps />
+    </Provider>
+  )
+
 }
 
 export default App;

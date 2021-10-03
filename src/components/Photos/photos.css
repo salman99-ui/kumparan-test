@@ -1,0 +1,16 @@
+.photos{
+    margin-bottom: 20px;
+    padding: 40px 10%;
+}
+
+.photos .title{
+    font-weight: 400;
+    font-size: 28px;
+
+}
+
+.photos .link{
+    padding : 7px 13px ;
+    border : 1px solid blue ;
+    text-decoration : none ;
+}

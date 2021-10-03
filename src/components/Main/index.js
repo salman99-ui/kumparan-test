@@ -1,85 +1,53 @@
-import React , {useState} from 'react'
-import {Bill} from '../../assets'
-import {BrowserRouter as Router , Switch , Link , Route} from 'react-router-dom'
-import {Home , About , PageNotFound , Investor , Blog, Bantuan} from '../../components'
-import { FaFacebook , FaInstagram , FaYoutube , FaEnvelope , FaPhone , FaMapMarkerAlt , FaCalendarDay , FaBars} from 'react-icons/fa'
-import './main.scss'
-
-
+import React , {useEffect} from 'react'
+import {TableContainer , Table  , TableHead , TableCell , TableBody , Paper, TableRow , Button} from '@mui/material'
+import {useDispatch , useSelector} from 'react-redux'
+import {useHistory} from 'react-router-dom'
+import {getUsers} from '../../Redux/User/action'
+import './main.css'
 function Index() {
-    const date = new Date() ;
-    const [show , setShow] = useState(false)
-    
+
+    const dispatch = useDispatch()
+    const history  = useHistory()
+    const data = useSelector(state => state.user.data)
+
+    useEffect( () => {
+        dispatch(getUsers())
+    } , [])
+
+
+    if(data.length === 0 ) return null 
+
     return (
-        <div className="main">
-            <Router>
-            <div className="navbar">
-                <Link to="/">
-                    <img src={Bill} width="60" height="60" />
-                </Link>
+        <div className="main">            
+            <h3>List of users</h3>
+                <TableContainer component={Paper}>
+                    <Table>
+                        <TableHead style={{backgroundColor : 'rgba(39, 211, 245, 0.8)'}}>
+                            <TableRow>
+                                <TableCell size="medium">Name</TableCell>
+                                <TableCell>Username</TableCell>
+                                <TableCell>Email</TableCell>
+                                <TableCell></TableCell>
+                            </TableRow>
+                        </TableHead>
 
-                <button className="btn-menu" onClick={() => setShow(!show)}><FaBars color="white" size="24" /></button>
-
-                <ul className={"list " + (show ? 'showTab' : '')}>
-
-                    <li><Link onClick={() => setShow(false)} to="/" className="link">Home</Link></li>
-                    <li><Link onClick={() => setShow(false)} to="/about" className="link">About Us</Link></li>
-                    <li><Link onClick={() => setShow(false)} to="/blog" className="link">Blog</Link></li>
-                    <li><Link onClick={() => setShow(false)} to="/investor" className="link">Investor Relation</Link></li>
-                    <li><Link onClick={() => setShow(false)} to="/bantuan" className="link">Help</Link></li>
-                    
-                </ul>
-            </div>
-
-            <Switch>
-                <Route component={Home} path="/" exact />
-                <Route component={About} path="/about" />
-                <Route component={Investor} path="/investor" />
-                <Route component={Blog} path="/blog" />
-                <Route component={Bantuan} path="/bantuan" />
-                <Route component={PageNotFound} path="**" />
-            </Switch>
-
-            <div className="footer">
-                    <div className="social-media">
-                        <h3>Social Media</h3>
-                        <a href="https://m.facebook.com/Bill-Indonesia-106523044922890/?ref=py_c"><FaFacebook size="26" color="white" /></a>
-                        <a href="https://instagram.com/bill_indonesia?utm_medium=copy_link"><FaInstagram size="26" color="white" /></a>
-                        <a href="https://youtube.com/channel/UCkDb-ziAMCKyzPdvmxQCHRQ"><FaYoutube size="26" color="white" /></a>
-                    </div>
-
-                    <div className="product">
-                        <h3>Service</h3>
-                        <ul>
-                            <li><Link to="/" className="list-link">Home</Link></li>
-                            <li><Link to="/about" className="list-link">About Us</Link></li>
-                            <li><Link to="/blog" className="list-link">Blog</Link></li>
-                            <li><Link to="/investor" className="list-link">Investor Relation</Link></li>
-                        </ul>
-                    </div>
-
-                    <div className="connect">
-                        <h3>Connect With Us</h3>
-                        <ul>
-                            <li><FaEnvelope className="icon" />  info@bill.co.id</li>
-                            <li><FaMapMarkerAlt className="icon" />  PIK 2 , North Jakarta</li>
-                            <li><FaCalendarDay className="icon" />  Monday - Friday </li>
-                        </ul>
-                    </div>
-                    
-                    <div className="aboutus">
-                        <h3>About Us</h3>
+                        <TableBody>
+                            {
+                                data.map( item => (
+                                    <TableRow>
+                                        <TableCell>{item.name}</TableCell>
+                                        <TableCell>{item.username}</TableCell>
+                                        <TableCell>{item.email}</TableCell>
+                                        <TableCell>
+                                            <Button variant="outlined" size="small" onClick={() => history.push(`/user/${item.id}`)}>Detail</Button>
+                                        </TableCell>
+                                    </TableRow>
+                                ))
+                            }
                         
-                        <p>We are a team of passionate people whose goal is to improve everyone's life through disruptive products. We build great products to solve your business problems.
-                            Our products are designed for small to medium size companies willing to optimize their performance.</p>
-                    </div>
-                </div>
-
-                <div className="copyright">
-                    <p>Bill &copy;Copyright { date.getFullYear() }</p>
-                </div>
-            
-            </Router>
+                        </TableBody>
+                    </Table>
+                </TableContainer>
         </div>
     )
 }

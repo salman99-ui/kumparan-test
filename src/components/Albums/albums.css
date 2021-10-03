@@ -1,0 +1,16 @@
+.albums{
+    margin-bottom: 20px;
+    padding: 40px 0;
+}
+
+.albums .title{
+    font-weight: 400;
+    font-size: 28px;
+
+}
+
+.albums .link{
+    padding : 7px 13px ;
+    border : 1px solid blue ;
+    text-decoration : none ;
+}

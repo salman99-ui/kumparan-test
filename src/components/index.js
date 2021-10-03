@@ -1,8 +1,8 @@
-import Home from './Home'
-import About from './About'
-import PageNotFound from './PageNotFound'
-import Investor from './Investor'
-import Blog from './Blog'
-import Bantuan from './Bantuan'
+import Main from './Main'
+import Detail from './Detail'
+import Posts from './Posts'
+import Albums from './Albums'
+import Comments from './Comments'
+import Photos from './Photos'
 
-export {Home , About , PageNotFound , Investor , Blog , Bantuan}
+export {Main , Detail , Posts , Albums , Comments , Photos}
